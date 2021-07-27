@@ -42,6 +42,12 @@ body {
   display: none;
 }
 
+/* container */
+
+.container {
+  padding: 20px 0px;
+  overflow: hidden;
+}
 
 /* card */
 
@@ -57,6 +63,7 @@ body {
   -moz-box-shadow: -10px 10px 0px 6px #ff4545;
   box-shadow: -10px 10px 0px 0px #ff4545; */
   border-radius: 4px;
+  animation: 1.4s from-top;
 }
 
 .card h2 {
@@ -207,6 +214,15 @@ body {
 
 /* keyframes */
 
+@keyframes from-top {
+  0% {
+    margin-top: -1000px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+
 @keyframes before {
   0% {
     width: 0.5em;
@@ -243,3 +259,22 @@ body {
   }
 }
 
+/* mobile first? HAHAHAHAHA. no. */
+
+@media (max-width: 420px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: unset;
+  }
+  
+  .container {
+    width: 100%;
+    overflow: unset;
+  }
+  
+  .card {
+    width: 100%;
+  }
+}
