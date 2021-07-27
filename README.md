@@ -1,1 +1,1 @@
-# resize
+## 🛴 An alternative to resizing images without losing all quality.
